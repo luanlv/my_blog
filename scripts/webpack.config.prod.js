@@ -83,7 +83,10 @@ module.exports = {
           babelrc: false,
           cacheDirectory: true,
           'plugins': [
-            'syntax-dynamic-import'
+            'syntax-dynamic-import',
+            ["transform-react-jsx", {
+              "pragma": "m"
+            }]
           ],
           'presets': [
             [
@@ -101,6 +104,18 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+        })
+      },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          loader: [{
+            loader: "css-loader"
+          }, {
+            loader: "sass-loader"
+          }],
+          // use style-loader in development
+          fallback: "style-loader"
         })
       }
     ]

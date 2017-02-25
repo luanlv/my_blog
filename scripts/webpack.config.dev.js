@@ -26,7 +26,10 @@ module.exports = {
           babelrc: false,
           cacheDirectory: true,
           'plugins': [
-            'syntax-dynamic-import'
+            'syntax-dynamic-import',
+            ["transform-react-jsx", {
+              "pragma": "m"
+            }]
           ],
           'presets': [
             [
@@ -45,6 +48,16 @@ module.exports = {
           fallback: 'style-loader',
           use: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
         })
+      },
+      {
+        test: /\.scss$/,
+        use: [{
+          loader: "style-loader" // creates style nodes from JS strings
+        }, {
+          loader: "css-loader" // translates CSS into CommonJS
+        }, {
+          loader: "sass-loader" // compiles Sass to CSS
+        }]
       }
     ]
   },

@@ -1,5 +1,9 @@
 {
-  "plugins": ["syntax-dynamic-import", "dynamic-import-node"],
+  "plugins": ["syntax-dynamic-import", "dynamic-import-node",
+    ["transform-react-jsx", {
+      "pragma": "m"
+    }]
+  ],
   "presets": [
     "latest"
   ],
