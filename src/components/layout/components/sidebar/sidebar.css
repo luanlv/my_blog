@@ -1,0 +1,67 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.sidebarContainer {
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: #fff;
+  transform: translateX(110%);
+  transition: transform 0.3s;
+  z-index: 10;
+  box-shadow: 0 0px 16px 0px rgba(0, 0, 0, 0.75);
+}
+
+.sidebarButton {
+  position: absolute;
+  right: 0;
+  border-radius: 0;
+  background: blanchedalmond;
+  border: 0;
+  top: 0;
+  height: 100%;
+  font-family: Rubix, sans-serif;
+  width: 100px;
+}
+
+.sidebarBackdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: none;
+  animation: fade-out 0.3s;
+}
+
+.open .sidebar {
+  transform: translateX(0%);
+}
+
+.open .sidebarBackdrop {
+  display: block;
+  animation: fade-in 0.5s forwards;
+}

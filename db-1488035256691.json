@@ -1,0 +1,73 @@
+{
+  "users": [
+    {
+      "id": 9408,
+      "name": "Westley Cartwright",
+      "email": "Wayne37@gmail.com"
+    },
+    {
+      "id": 44321,
+      "name": "Brice Dickinson",
+      "email": "Alexzander_Miller49@gmail.com",
+      "address": {
+        "zipCode": "57200",
+        "county": "Cambridgeshire",
+        "streetAddress": "712 Freeman Corners"
+      }
+    },
+    {
+      "id": 95399,
+      "name": "Marilyne Kihn",
+      "email": "Reese.Feil@hotmail.com"
+    },
+    {
+      "id": 39653,
+      "name": "Dameon O'Hara",
+      "email": "Lilly.Stroman45@gmail.com",
+      "address": {
+        "zipCode": "06663",
+        "city": "Tiaraview"
+      }
+    },
+    {
+      "id": 4553,
+      "name": "Erna Gislason",
+      "email": "Rashad4@hotmail.com"
+    },
+    {
+      "id": 23500,
+      "name": "Romaine Jacobson",
+      "email": "Adan.Anderson1@gmail.com"
+    },
+    {
+      "id": 91081,
+      "name": "Darius Mosciski DVM",
+      "email": "Percy99@yahoo.com",
+      "address": {
+        "zipCode": "95104",
+        "streetAddress": "146 Lang Station",
+        "city": "Abbeyberg",
+        "county": "Bedfordshire"
+      }
+    },
+    {
+      "id": 26634,
+      "name": "Ms. Reta Nienow",
+      "email": "Anabel_Williamson72@yahoo.com"
+    },
+    {
+      "id": 8108,
+      "name": "Jaycee Olson",
+      "email": "Isabell_Stokes@hotmail.com",
+      "address": {
+        "zipCode": "66578",
+        "Ut6": 44400885
+      }
+    },
+    {
+      "id": 18794,
+      "name": "Nikita Legros",
+      "email": "Ludie.Armstrong@yahoo.com"
+    }
+  ]
+}
