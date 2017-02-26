@@ -1,0 +1,51 @@
+.post-postWr {
+  padding: 5px;
+  @include breakpoint($mobile) {
+    padding: 10px 20px;
+  }
+}
+
+.post-coverWr {
+  position: relative;
+  &:after {
+    padding-top: 37.5%;
+    display: block;
+    content:'';
+  }
+}
+
+.post-cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: deepskyblue;
+  color: white;
+}
+
+.post-title {
+  background: white;
+  color: black;
+  padding: 5%;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.post-contentWr {
+  background: white;
+  margin-top: 20px;
+}
+.post-meta {
+  height: 70px;
+  background: #ddd;
+}
+.post-content {
+  padding: 20px;
+  @include breakpoint($table) {
+    padding: 30px;
+    @include breakpoint($table) {
+      padding: 40px;
+    }
+  }
+}

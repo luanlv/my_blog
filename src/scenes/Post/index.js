@@ -1,14 +1,14 @@
 import m from 'mithril'
 import {getJs} from '../../utils'
 import layout from '../../components/layout'
-import {boundGetHome} from '../../data/scenes/home/index'
+import {boundGetPost} from '../../data/scenes/post/index'
 
 export default {
-  onmatch () {
+  onmatch ({slug}) {
     var resolver = this
     return Promise.all([
-      getJs(() => import('./home.js')),
-      window.__STATE_IS_PRELOADED__ || boundGetHome()
+      getJs(() => import('./view.js')),
+      window.__STATE_IS_PRELOADED__ || boundGetPost(slug)
     ]).then((data) => {
       resolver.component = data[0]
       window.__STATE_IS_PRELOADED__ = false

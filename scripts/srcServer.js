@@ -24,6 +24,7 @@ connect()
 
 function listen () {
 
+  app.use('/assets', express.static('public'))
 
   app.use('/api', api)
 

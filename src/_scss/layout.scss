@@ -10,6 +10,7 @@
 
 body, html {
   background: #f1f1f1;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
 }
 .container {
   @include container(1480px);
@@ -78,16 +79,39 @@ nav {
   height: 50px;
 }
 
+footer {
+  @include susy-clearfix();
+  background: #37474f;
+  color: white;
+  @include breakpoint($large-desktop) {
+    padding-left: 200px;
+  }
+  .footer-1, .footer-2, .footer-3, .footer-4 {
+    text-align: center;
+    width: 100%;
+  }
+  @include breakpoint($table) {
+    .footer-1 {
+      @include span(3 of 9)
+    }
+    .footer-2, .footer-3, .footer-4 {
+      @include span(2 of 9)
+    }
+  }
+}
+
 .content {
   width: 100%;
   @include breakpoint($large-desktop) {
     padding-left: 200px;
   }
   padding-right: 0;
+  @include susy-clearfix();
 }
 
 .content {
   .left {
+    margin-top: 5px;
     width: 100%;
     padding-right: 0;
     @include breakpoint($desktop){
@@ -95,6 +119,7 @@ nav {
     }
   }
   .right {
+    margin-top: 5px;
     display: none;
     position: absolute;
     top: 50px;

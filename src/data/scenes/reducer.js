@@ -6,12 +6,22 @@ const initialState = {
     needUpdate: false,
     value: []
   },
+  hotArticles: {
+    ok: false,
+    needUpdate: false,
+    value: []
+  },
   home: {
     articles: {
       ok: false,
       needUpdate: true,
       value: []
     }
+  },
+  post: {
+    ok: false,
+    needUpdate: true,
+    value: {}
   }
 }
 
@@ -45,6 +55,22 @@ function newState (state, data, requireList) {
           needUpdate: result.categories.needUpdate,
           ok: data.categories.ok,
           value: data.categories.value
+        }
+      })
+    } else if (key === 'a2') {
+      result = Object.assign({}, result, {
+        hotArticles: {
+          needUpdate: result.hotArticles.needUpdate,
+          ok: data.hotArticles.ok,
+          value: data.hotArticles.value
+        }
+      })
+    } else if (key === 'p1') {
+      result = Object.assign({}, result, {
+        post: {
+          needUpdate: result.post.needUpdate,
+          ok: data.post.ok,
+          value: data.post.value
         }
       })
     }

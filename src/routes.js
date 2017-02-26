@@ -1,6 +1,7 @@
 import m from 'mithril'
 import Home from './scenes/Home'
 import Category from './scenes/Category'
+import Post from './scenes/Post'
 // import About from './scenes/Category'
 // import Users from './scenes/Users'
 // import User from './scenes/User'
@@ -12,7 +13,8 @@ store.subscribe(m.redraw)
 
 export default {
   '/': Home,
-  '/category/:slug': Category
+  '/category/:slug': Category,
+  '/post/:slug': Post
   // '/about': About,
   // '/users': Users,
   // '/users/create': UserCreate,

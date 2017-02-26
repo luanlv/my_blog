@@ -12,3 +12,10 @@ export function getArticlesForHome () {
   return store.getState().home.articles.value
 }
 
+export function getHotArticles () {
+  return store.getState().hotArticles.value
+}
+
+export function getPost () {
+  return store.getState().post.value
+}

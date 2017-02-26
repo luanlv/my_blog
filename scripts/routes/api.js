@@ -22,7 +22,8 @@ router.get('/get', (req, res) => {
     } else {
       let mapped = map[listData[0].slice(0,2)]
       if (mapped) {
-        unirest.get(mapped.url).end((res) => {
+        let url = (mapped.extra === true)?(mapped.url + listData[0].slice(3)):(mapped.url)
+        unirest.get(url).end((res) => {
           result[mapped.field] = {
             ok: res.ok,
             value: res.body
@@ -126,18 +127,71 @@ router.get('/articlesForHome', (req, res) => {
       $match: {}
     },
     {
+      $limit: 12
+    },
+    {
       $lookup: {
         from: 'category',
         localField: 'categories',
         foreignField: '_id',
         as: 'categories'
       }
-    },
-    {
-      $limit: 12
     }
     ], (err, data) => {
     res.send(data)
+  })
+})
+
+
+router.get('/hotArticles', (req, res) => {
+  Article.aggregate([
+    {
+      $match: {}
+    },
+    {
+      $sort: {
+        view: -1
+      }
+    },
+    {
+      $limit: 5
+    },
+    {
+      $lookup: {
+        from: 'category',
+        localField: 'categories',
+        foreignField: '_id',
+        as: 'categories'
+      }
+    }
+  ], (err, data) => {
+    res.send(data)
+  })
+})
+
+router.get('/getPost/:slug', (req, res) => {
+  Article.aggregate([
+    {
+      $match: { slug: req.params.slug}
+    },
+    {
+      $limit: 1
+    },
+    {
+      $lookup: {
+        from: 'category',
+        localField: 'categories',
+        foreignField: '_id',
+        as: 'categories'
+      }
+    }
+  ], (err, data) => {
+    if(data.length>0) {
+      Article.update({ _id: data[0]._id }, { $inc: { view: 1 }}, () => {});
+      res.send(data[0])
+    } else {
+      res.sendStatus(400)
+    }
   })
 })
 
