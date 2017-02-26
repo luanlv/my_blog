@@ -13,7 +13,7 @@ function initialiseStore (initialState) {
       composeEnhancers(
         applyMiddleware(thunk, reduxImmutableStateInvariant())
       )
-      )
+  )
 }
 
 function setAccessibleStore (reduxStore) {

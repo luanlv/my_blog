@@ -1,14 +1,5 @@
-import {combineReducers} from 'redux'
-import auth from './auth/reducer'
-import users from './users/reducer'
-import requests from './requests/reducer'
-import userForm from './userForm/reducer'
+import data from './scenes/reducer'
 
-const rootReducer = combineReducers({
-  requests,
-  auth,
-  users,
-  userForm
-})
+const rootReducer = data
 
 export default rootReducer

@@ -1,12 +1,9 @@
+/* eslint-disable */
 import m from 'mithril'
-import c from './layout.css'
-import navbar from './components/navbar'
+/* eslint-enable */
 
 export default {
   view (vnode) {
-    return m('.layout', [
-      m(navbar),
-      m(`.${c.layoutMain}`, vnode.children)
-    ])
+    return (vnode.children)
   }
 }

@@ -7,14 +7,12 @@ const Article = mongoose.model('Article')
 const Category = mongoose.model('Category')
 let unirest = require('unirest')
 var async    = require('async')
+var map = require('./mapUrl').default
 
 app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(bodyParser.json());
 
 let jsonParser = bodyParser.json()
-
-// app.use(bodyParser.json());
-
 
 router.get('/get', (req, res) => {
 
@@ -22,19 +20,31 @@ router.get('/get', (req, res) => {
     if(listData.length === 0){
       res.send(result)
     } else {
-      unirest.get('http://localhost:3000/api/' + listData[0] + '/get').end((res) => {
-        result[listData[0]] = {
-          ok: res.ok,
-          value: res.body
-        }
+      console.log(map)
+      let mapped = map[listData[0].slice(0,2)]
+      console.log('mapped ok !!')
+      console.log(mapped)
+      if (mapped) {
+        unirest.get(mapped.url).end((res) => {
+          result[mapped.field] = {
+            ok: res.ok,
+            value: res.body
+          }
+          listData.shift()
+          return sendValue(listData, result)
+        })
+      } else {
         listData.shift()
         return sendValue(listData, result)
-      })
+      }
+
     }
   }
 
   if(req.query.v){
     let listData = req.query.v.split(',')
+    console.log('========================')
+    console.log(listData)
     let resData = {}
     sendValue(listData, resData)
   } else {

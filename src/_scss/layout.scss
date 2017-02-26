@@ -1,0 +1,91 @@
+
+@include layout($susy)
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.container {
+  @include container(1480px);
+  position: relative;
+}
+
+header {
+  width: 200px;
+  left: -200px;
+  position: absolute;
+  z-index: 22;
+  @include breakpoint($desktop) {
+    left: 0;
+  }
+}
+
+.overlaySidebar {
+  display: none;
+  z-index: 21;
+  position:fixed; top:0px; left:0px; bottom:0px; right:0px;
+  background: rgba(0, 0, 0, 0.45);
+  //background: red;
+}
+
+.showSidebar {
+  header {
+    left: 0 !important;
+  }
+  .overlaySidebar {
+    display: block;
+    @include breakpoint($desktop) {
+      display: none;
+    }
+  }
+}
+
+nav {
+  position: fixed;  top: 0;  left: 0; width: 100%;  height: 50px;  z-index: 20;
+  @include breakpoint($desktop) {
+    display: none;
+  }
+  .menu-icon {
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    background: #ddd;
+    width: 50px;
+    height: 100%;
+  }
+}
+
+.nav {
+  width: 100%;
+  height: 50px;
+}
+
+.content {
+  width: 100%;
+  @include breakpoint($desktop) {
+    padding-left: 200px;
+  }
+  padding-right: 0;
+}
+
+.content {
+  .left {
+    width: 100%;
+    padding-right: 0;
+    @include breakpoint($table){
+      padding-right: 200px;
+    }
+  }
+  .right {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    @include breakpoint($table){
+      display: block;
+    }
+  }
+}

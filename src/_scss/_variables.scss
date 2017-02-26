@@ -1,0 +1,33 @@
+@import './colors/colors';
+@import './shadow/box-shadow';
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+// assume min-width (by default) if only a number
+$high-tide: 500px;
+// set min-width/max-width if both values are numbers
+$ex-presidents: 600px 800px;
+// if one value is a string, assume a feature/value pair
+$surfboard-width: max-width 1000px;
+// string tests together within parentheses, assume each item is a feature value pair
+$surfboard-height: (min-height 1000px) (orientation portrait);
+
+
+$sMobile: 320px;
+$mobile: 480px;
+$table : 768px;
+$desktop : 960px;
+
+
+.mh500 {
+  min-height: 500px;
+}
+
+.mh1000 {
+  min-height: 1000px;
+}

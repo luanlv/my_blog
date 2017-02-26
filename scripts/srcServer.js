@@ -54,5 +54,6 @@ function listen () {
 
 function connect () {
   var options = { server: { socketOptions: { keepAlive: 1 } } };
+  mongoose.Promise = require('bluebird');
   return mongoose.connect('mongodb://localhost/myapp', options).connection;
 }
