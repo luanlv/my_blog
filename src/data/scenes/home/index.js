@@ -5,7 +5,6 @@ import {store} from '../../../store'
 export function boundGetHome () { return store.dispatch(loadHome()) }
 
 export function loadHomeSuccess (data, requireList) {
-  console.log('run loadHomeSuccess')
   return { type: types.LOAD_HOME_SUCCESS, data, requireList }
 }
 

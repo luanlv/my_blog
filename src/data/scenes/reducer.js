@@ -28,7 +28,7 @@ export default function (state = initialState, action) {
 function newState (state, data, requireList) {
   var result = Object.assign({}, state, {})
   requireList.forEach((el) => {
-    var key = el.slice(0,2)
+    var key = el.slice(0, 2)
     if (key === 'a1') {
       result = Object.assign({}, result, {
         home: {

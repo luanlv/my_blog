@@ -1,3 +1,4 @@
+@import './shadow/box-shadow';
 
 @include layout($susy)
 
@@ -7,18 +8,30 @@
   -webkit-box-sizing: border-box;
 }
 
+body, html {
+  background: #f1f1f1;
+}
 .container {
   @include container(1480px);
   position: relative;
 }
 
 header {
+  //background: darken(teal, 15%);
+  background: darken($aqua, 65%);
+  //background: rgb(64, 64, 64);
   width: 200px;
+  height: 100vh;
   left: -200px;
-  position: absolute;
+  position: fixed;
   z-index: 22;
-  @include breakpoint($desktop) {
+  transition: all .05s ease-in-out;
+  @include breakpoint($large-desktop) {
     left: 0;
+  }
+  > div {
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -36,24 +49,27 @@ header {
   }
   .overlaySidebar {
     display: block;
-    @include breakpoint($desktop) {
+    @include breakpoint($large-desktop) {
       display: none;
     }
   }
 }
 
 nav {
+
+
+  padding: 5px;
+  background: white;
   position: fixed;  top: 0;  left: 0; width: 100%;  height: 50px;  z-index: 20;
-  @include breakpoint($desktop) {
+  @include breakpoint($large-desktop) {
     display: none;
   }
   .menu-icon {
+    display: inline-block;
     cursor: pointer;
     text-align: center;
     line-height: 50px;
-    background: #ddd;
-    width: 50px;
-    height: 100%;
+    margin: 5px;
   }
 }
 
@@ -64,7 +80,7 @@ nav {
 
 .content {
   width: 100%;
-  @include breakpoint($desktop) {
+  @include breakpoint($large-desktop) {
     padding-left: 200px;
   }
   padding-right: 0;
@@ -74,8 +90,8 @@ nav {
   .left {
     width: 100%;
     padding-right: 0;
-    @include breakpoint($table){
-      padding-right: 200px;
+    @include breakpoint($desktop){
+      padding-right: 300px;
     }
   }
   .right {
@@ -83,8 +99,8 @@ nav {
     position: absolute;
     top: 50px;
     right: 0;
-    width: 200px;
-    @include breakpoint($table){
+    width: 300px;
+    @include breakpoint($desktop){
       display: block;
     }
   }

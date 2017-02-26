@@ -5,7 +5,10 @@ export function getState () {
 }
 
 export function getCategories () {
-  console.log(store.getState().categories.value)
   return store.getState().categories.value
+}
+
+export function getArticlesForHome () {
+  return store.getState().home.articles.value
 }
 

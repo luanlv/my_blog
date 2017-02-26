@@ -1,7 +1,7 @@
 export default {
   a1: {
     field: 'articles',
-    url: 'http://localhost:3000/api/article/get'
+    url: 'http://localhost:3000/api/articlesForHome'
   },
   c1: {
     field: 'categories',

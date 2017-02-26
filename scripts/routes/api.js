@@ -20,10 +20,7 @@ router.get('/get', (req, res) => {
     if(listData.length === 0){
       res.send(result)
     } else {
-      console.log(map)
       let mapped = map[listData[0].slice(0,2)]
-      console.log('mapped ok !!')
-      console.log(mapped)
       if (mapped) {
         unirest.get(mapped.url).end((res) => {
           result[mapped.field] = {
@@ -43,13 +40,12 @@ router.get('/get', (req, res) => {
 
   if(req.query.v){
     let listData = req.query.v.split(',')
-    console.log('========================')
-    console.log(listData)
     let resData = {}
     sendValue(listData, resData)
   } else {
     res.sendStatus(400)
   }
+
 });
 
 router.post('/category/new', jsonParser, (req, res, next) => {
@@ -86,7 +82,6 @@ router.delete('/category/delete/:id', (req, res) => {
 // Article
 router.post('/article/new', jsonParser, (req, res, next) => {
   if (!req.body) return res.sendStatus(400);
-  console.log(req.body)
   req.body.categories = req.body.categories.map(function(el){
     return el._id
   })
@@ -125,5 +120,25 @@ router.put('/article/:id', jsonParser, (req, res) => {
   })
 })
 
+router.get('/articlesForHome', (req, res) => {
+  Article.aggregate([
+    {
+      $match: {}
+    },
+    {
+      $lookup: {
+        from: 'category',
+        localField: 'categories',
+        foreignField: '_id',
+        as: 'categories'
+      }
+    },
+    {
+      $limit: 12
+    }
+    ], (err, data) => {
+    res.send(data)
+  })
+})
 
 module.exports = router;

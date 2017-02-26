@@ -1,5 +1,5 @@
 @import './colors/colors';
-@import './shadow/box-shadow';
+
 $susy: (
   columns: 12,
   gutters: 1/4,
@@ -22,6 +22,7 @@ $sMobile: 320px;
 $mobile: 480px;
 $table : 768px;
 $desktop : 960px;
+$large-desktop : 1280px;
 
 
 .mh500 {
@@ -31,3 +32,5 @@ $desktop : 960px;
 .mh1000 {
   min-height: 1000px;
 }
+
+

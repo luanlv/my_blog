@@ -1,0 +1,72 @@
+{
+  "users": [
+    {
+      "id": 41947,
+      "name": "Mr. Dejah Hilll",
+      "email": "Isabelle_Hoppe@hotmail.com",
+      "address": {
+        "zipCode": "24202",
+        "city": "Stammberg",
+        "streetAddress": "5047 Malika Harbor",
+        "county": "Avon"
+      }
+    },
+    {
+      "id": 21128,
+      "name": "Braden Bernhard",
+      "email": "Riley_Bogisich39@yahoo.com"
+    },
+    {
+      "id": 19896,
+      "name": "Dr. Armani Runte",
+      "email": "Oliver_Wolff@gmail.com",
+      "address": {
+        "zipCode": "68805-8779",
+        "consectetur8": false
+      }
+    },
+    {
+      "id": 95777,
+      "name": "London Hills",
+      "email": "Emmanuelle_Turner37@gmail.com"
+    },
+    {
+      "id": 85916,
+      "name": "Mathilde Rempel",
+      "email": "Zachary66@yahoo.com"
+    },
+    {
+      "id": 29943,
+      "name": "Brigitte Cruickshank",
+      "email": "Berry.Will32@hotmail.com",
+      "address": {
+        "zipCode": "71697",
+        "streetAddress": "86145 Breitenberg Cliff"
+      }
+    },
+    {
+      "id": 79556,
+      "name": "Miss Kira Reinger",
+      "email": "Darryl_Reynolds67@hotmail.com"
+    },
+    {
+      "id": 52790,
+      "name": "Jane Jacobi",
+      "email": "Nikko_Franecki35@gmail.com",
+      "address": {
+        "zipCode": "38688-2105",
+        "consectetur5ef": 64392485
+      }
+    },
+    {
+      "id": 35720,
+      "name": "Sonia Runte",
+      "email": "Estefania60@yahoo.com"
+    },
+    {
+      "id": 85084,
+      "name": "Alexander Hansen",
+      "email": "Stephany.Spencer58@yahoo.com"
+    }
+  ]
+}
