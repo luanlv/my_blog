@@ -14,7 +14,7 @@ const initialState = {
   home: {
     articles: {
       ok: false,
-      needUpdate: true,
+      needUpdate: false,
       value: []
     }
   },
@@ -35,17 +35,17 @@ export default function (state = initialState, action) {
   }
 }
 
-function newState (state, data, requireList) {
+function newState (state, data) {
   var result = Object.assign({}, state, {})
-  requireList.forEach((el) => {
-    var key = el.slice(0, 2)
+  data.forEach((el) => {
+    const key = el.req.v
     if (key === 'a1') {
       result = Object.assign({}, result, {
         home: {
           articles: {
             needUpdate: result.home.articles.needUpdate,
-            ok: data.articles.ok,
-            value: data.articles.value
+            ok: el.ok,
+            value: el.value
           }
         }
       })
@@ -53,24 +53,24 @@ function newState (state, data, requireList) {
       result = Object.assign({}, result, {
         categories: {
           needUpdate: result.categories.needUpdate,
-          ok: data.categories.ok,
-          value: data.categories.value
+          ok: el.ok,
+          value: el.value
         }
       })
     } else if (key === 'a2') {
       result = Object.assign({}, result, {
         hotArticles: {
           needUpdate: result.hotArticles.needUpdate,
-          ok: data.hotArticles.ok,
-          value: data.hotArticles.value
+          ok: el.ok,
+          value: el.value
         }
       })
     } else if (key === 'p1') {
       result = Object.assign({}, result, {
         post: {
           needUpdate: result.post.needUpdate,
-          ok: data.post.ok,
-          value: data.post.value
+          ok: el.ok,
+          value: el.value
         }
       })
     }

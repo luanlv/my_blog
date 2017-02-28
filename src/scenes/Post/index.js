@@ -2,6 +2,7 @@ import m from 'mithril'
 import {getJs} from '../../utils'
 import layout from '../../components/layout'
 import {boundGetPost} from '../../data/scenes/post/index'
+import {getPost} from '../../data/scenes/access'
 
 export default {
   onmatch ({slug}) {
@@ -15,8 +16,8 @@ export default {
     })
   },
   render (vnode) {
-    this.title = 'Home - Mithril'
-    this.description = 'test the meta description'
+    this.title = getPost().title
+    this.description = getPost().description
     document.title = this.title
     return m(layout, vnode.attrs, m(this.component, vnode.attrs))
   }

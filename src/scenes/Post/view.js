@@ -8,7 +8,9 @@ export default {
   oninit (vnode) {
     // if (!window.showSidebar) window.showSidebar = false
   },
-
+  oncreate (vndode) {
+    window.scrollTo(0, 0)
+  },
   view (vnode) {
     return (
       <div className='post-postWr'>

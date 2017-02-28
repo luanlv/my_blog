@@ -15,8 +15,8 @@ export default {
     })
   },
   render (vnode) {
-    this.title = 'Home - Mithril'
-    this.description = 'test the meta description'
+    this.title = 'VNGUY.COM'
+    this.description = 'My personal blog about programing'
     document.title = this.title
     return m(layout, vnode.attrs, m(this.component, vnode.attrs))
   }

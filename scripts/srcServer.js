@@ -11,6 +11,7 @@ import mongoose from 'mongoose'
 const models = require('./models/index')
 
 const api = require('./routes/api')
+const image = require('./routes/image')
 
 const port = 3000
 const app = express()
@@ -27,6 +28,8 @@ function listen () {
   app.use('/assets', express.static('public'))
 
   app.use('/api', api)
+
+  app.use('/image', image)
 
   const webpackDevMiddlewareInstance = webpackDevMiddleware(compiler, {
     compress: true,

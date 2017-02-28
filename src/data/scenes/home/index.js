@@ -11,9 +11,24 @@ export function loadHomeSuccess (data, requireList) {
 function requireData () {
   var data = []
   const state = store.getState()
-  if (!state.categories.ok) data.push('c1')
-  if (!state.home.ok) data.push('a1-1')
-  if (!state.hotArticles.ok) data.push('a2')
+  if (state.categories.needUpdate || !state.categories.ok) {
+    data.push({
+      t: 1,
+      v: 'c1'
+    })
+  }
+  if (state.home.needUpdate || !state.home.ok) {
+    data.push({
+      t: 1,
+      v: 'a1'
+    })
+  }
+  if (state.hotArticles.needUpdate || !state.hotArticles.ok) {
+    data.push({
+      t: 1,
+      v: 'a2'
+    })
+  }
   return data
 }
 

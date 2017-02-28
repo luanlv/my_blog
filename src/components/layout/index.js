@@ -7,6 +7,8 @@ export default {
   oninit (vnode) {
     if (!window.showSidebar) window.showSidebar = false
   },
+  oncreate (vnode) {
+  },
   view (vnode) {
     return (
       <div className={ (window.showSidebar ? 'showSidebar' : '')}>
@@ -117,13 +119,13 @@ export default {
               ><img src='/assets/logo3.png' alt='logo vnguy' width='200' height='140'/></a>
             </div>
             <div className="footer-2">
-              Developing...
+
             </div>
             <div className="footer-3">
-              Developing...
+
             </div>
             <div className="footer-4">
-              Developing...
+
             </div>
           </footer>
 

@@ -11,8 +11,19 @@ export function loadPostSuccess (data, requireList) {
 function requireData (slug) {
   var data = []
   const state = store.getState()
-  if (state.post.needUpdate || !state.post.ok) data.push('p1|' + slug)
-  if (!state.hotArticles.ok) data.push('a2')
+  if (state.post.needUpdate || !state.post.ok) {
+    data.push({
+      t: 2,
+      v: 'p1',
+      e: slug
+    })
+  }
+  if (state.hotArticles.needUpdate || !state.hotArticles.ok) {
+    data.push({
+      t: 1,
+      v: 'a2'
+    })
+  }
   return data
 }
 
