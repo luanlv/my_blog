@@ -52,7 +52,9 @@ export default {
                 <input type='search' placeholder='Search' />
               </form>
               <div className='nav-right' style='float: right'>
-                <a href='#'>Home</a>
+                <a href='/'
+                  oncreate={m.route.link}
+                >Home</a>
                 <a href='#'>Category</a>
                 <a href='#'>Login</a>
                 <a href='#'>About</a>

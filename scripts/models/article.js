@@ -19,6 +19,7 @@ var ArticleSchema = new Schema({
       reason: String
     }
   ],
+  cover: {type: String, require: true},
   content: {type: String, required: true},
   createAt: { type: Date, default: Date.now },
   publicAt: { type: Date, default: Date.now },

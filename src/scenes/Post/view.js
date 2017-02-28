@@ -17,6 +17,7 @@ export default {
         <div className="post-header">
           <div className="post-coverWr">
             <div className="post-cover">
+              <img src={'/image/' + getPost().cover} alt={getPost().cover}/>
             </div>
           </div>
           <div className="post-title">

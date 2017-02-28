@@ -10,7 +10,7 @@ export default {
 
   view (vnode) {
     return (
-      <div className='home-postWr'>
+      <div className='home-postWr mh500'>
         {getArticlesForHome().map((article) => {
           return (
             <div className='home-post'>
@@ -21,7 +21,7 @@ export default {
                   <div>
                     <div className='home-coverWr'>
                       <div className='home-post-cover'>
-
+                        <img src={'/image/' + article.cover} alt={article.cover}/>
                       </div>
                     </div>
 
