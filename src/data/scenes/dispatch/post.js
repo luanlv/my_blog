@@ -1,6 +1,7 @@
 import * as types from '../../actionTypes'
 import * as api from './../api'
 import {store} from '../../../store'
+import * as dataRequire from '../dataRequire'
 
 export function boundGetPost (slug) { return store.dispatch(loadPost(slug)) }
 
@@ -10,20 +11,8 @@ export function loadPostSuccess (data, requireList) {
 
 function requireData (slug) {
   var data = []
-  const state = store.getState()
-  if (state.post.needUpdate || !state.post.ok) {
-    data.push({
-      t: 2,
-      v: 'p1',
-      e: slug
-    })
-  }
-  if (state.hotArticles.needUpdate || !state.hotArticles.ok) {
-    data.push({
-      t: 1,
-      v: 'a2'
-    })
-  }
+  data = dataRequire.post(data, slug)
+  data = dataRequire.hotArticles(data)
   return data
 }
 

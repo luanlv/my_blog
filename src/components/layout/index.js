@@ -3,15 +3,25 @@ import m from 'mithril'
 /* eslint-enable */
 import {getHotArticles} from '../../data/scenes/access'
 
+let isNode = false;
+if (typeof process === 'object') {
+  if (typeof process.versions === 'object') {
+    if (typeof process.versions.node !== 'undefined') {
+      isNode = true;
+    }
+  }
+}
+
 export default {
   oninit (vnode) {
-    if (!window.showSidebar) window.showSidebar = false
+
   },
   oncreate (vnode) {
+
   },
   view (vnode) {
     return (
-      <div className={ (window.showSidebar ? 'showSidebar' : '')}>
+      <div className={(window.showSidebar ? 'showSidebar' : '')} id={isNode ? '' : 'enableAnimate'} >
         <div className={'container'}>
           <header className='shadow1'>
             <div>
@@ -19,16 +29,26 @@ export default {
                 <a href='/'
                    oncreate={m.route.link}
                 >
-                  <img src='/assets/logo3.png' alt='logo vnguy' width='200' height='140'/>
+                  <div className="top-stick bg-teal"></div>
+                  <img src='/assets/logo3.png' alt='logo vnguy.com' width='200' height='140'/>
+                  <p class="site-description">Programming Blog</p>
                 </a>
               </div>
               <div style='position: relative'>
                 <div className='topic-title has-triangle-after'>TOPICS</div>
                 <ul className='topicWr'>
-                  <li><a href=''>Node Js</a></li>
-                  <li><a href=''>Play Framework</a></li>
-                  <li><a href=''>React Js</a></li>
-                  <li><a href=''>Vue Js</a></li>
+                  <li><a href='/category/nodejs'
+                    oncreate={m.route.link}
+                  >Node Js</a></li>
+                  <li><a href='/category/playframework'
+                    oncreate={m.route.link}
+                  >Play Framework</a></li>
+                  <li><a href='/category/reactjs'
+                    oncreate={m.route.link}
+                  >React Js</a></li>
+                  <li><a href='/category/vuejs'
+                    oncreate={m.route.link}
+                  >Vue Js</a></li>
                 </ul>
               </div>
               <div className='sidebar-bottom has-triangle-before '></div>
@@ -55,9 +75,9 @@ export default {
                 <a href='/'
                   oncreate={m.route.link}
                 >Home</a>
-                <a href='#'>Category</a>
-                <a href='#'>Login</a>
-                <a href='#'>About</a>
+                <a href='/categories'
+                  oncreate={m.route.link}
+                >Categories</a>
               </div>
             </div>
             <div className='left'>

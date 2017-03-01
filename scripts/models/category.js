@@ -4,7 +4,8 @@ let autoIncrement = require('./autoIncrement')
 
 let CategorySchema = new Schema({
   title: {type: String,  validate: /\S+/,  require: true},
-  slug: {type: String, require: true, unique: true}
+  slug: {type: String, require: true, unique: true},
+  description: {type: String, require: true}
 }, { collection: 'category'});
 
 CategorySchema.plugin(autoIncrement.plugin, 'Category')

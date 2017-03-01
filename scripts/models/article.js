@@ -23,7 +23,7 @@ var ArticleSchema = new Schema({
   content: {type: String, required: true},
   createAt: { type: Date, default: Date.now },
   publicAt: { type: Date, default: Date.now },
-  categories: [Number],
+  categories: [String],
   tags: { type: {
     slug: String,
     name: String

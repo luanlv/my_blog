@@ -71,6 +71,14 @@ router.put('/category/:id', jsonParser, (req, res) => {
   })
 })
 
+router.get('/category/:slug', (req, res) => {
+  Category.findOne({slug: req.params.slug}, (err, category) => {
+    if(err) res.sendStatus(400)
+    res.send(category)
+  })
+})
+
+
 router.delete('/category/delete/:id', (req, res) => {
   Category.remove({_id: req.params.id}, (err) => {
     if(err) res.sendStatus(400)
@@ -85,7 +93,7 @@ router.post('/article/new', jsonParser, (req, res, next) => {
     return res.sendStatus(400);
   else {
     req.body.categories = req.body.categories.map(function (el) {
-      return el._id
+      return el.slug
     })
     Article.create(req.body, (err, article) => {
       if (err) res.sendStatus(400)
@@ -119,6 +127,31 @@ router.get('/article/:id', (req, res) => {
     }
   ], (err, data) => {
     if(err || data.length < 1){
+      res.sendStatus(400)
+    } else {
+      res.send(data)
+    }
+  })
+})
+
+router.get('/articlesByCategory/:slug', (req, res) => {
+  Article.aggregate([
+    {
+      $match: {categories: req.params.slug}
+    },
+    {
+      $limit: 1
+    },
+    {
+      $lookup: {
+        from: 'category',
+        localField: 'categories',
+        foreignField: 'slug',
+        as: 'categories'
+      }
+    }
+  ], (err, data) => {
+    if(err){
       res.sendStatus(400)
     } else {
       res.send(data)
@@ -197,7 +230,7 @@ router.get('/getPost/:slug', (req, res) => {
       $lookup: {
         from: 'category',
         localField: 'categories',
-        foreignField: '_id',
+        foreignField: 'slug',
         as: 'categories'
       }
     }

@@ -1,7 +1,7 @@
 import m from 'mithril'
 import {getJs} from '../../utils'
 import layout from '../../components/layout'
-import {boundGetPost} from '../../data/scenes/post/index'
+import {boundGetPost} from '../../data/scenes/dispatch/post'
 import {getPost} from '../../data/scenes/access'
 
 export default {

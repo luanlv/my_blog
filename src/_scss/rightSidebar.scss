@@ -33,6 +33,12 @@
   }
 }
 
+#korfu {
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 30, 0.25);
+  -moz-box-shadow: 1px 1px 3px 0px rgba(50, 50, 30, 0.25);
+  box-shadow: 1px 1px 3px 0px rgba(50, 50, 30, 0.25);
+}
+
 #korfu:before, #korfu:after {
   border-top: medium none;
   bottom: 1px;

@@ -1,13 +1,13 @@
 import m from 'mithril'
 import {getJs} from '../../utils'
 import layout from '../../components/layout'
-import {boundGetHome} from '../../data/scenes/home/index'
+import {boundGetHome} from '../../data/scenes/dispatch/home'
 
 export default {
   onmatch () {
     var resolver = this
     return Promise.all([
-      getJs(() => import('./home.js')),
+      getJs(() => import('./view.js')),
       window.__STATE_IS_PRELOADED__ || boundGetHome()
     ]).then((data) => {
       resolver.component = data[0]

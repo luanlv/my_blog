@@ -120,6 +120,7 @@
     "webpack-md5-hash": "^0.0.5"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "async": "^2.1.5",
     "axios": "^0.15.3",
     "bluebird": "^3.4.7",

@@ -13,7 +13,7 @@ export default {
       <div className='home-postWr mh500'>
         {getArticlesForHome().map((article) => {
           return (
-            <div className='home-post'>
+            <div className='home-post fadeIn animated'>
               <a href={'/post/' + article.slug}
                  oncreate={m.route.link}
               >
