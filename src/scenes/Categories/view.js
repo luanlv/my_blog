@@ -22,7 +22,6 @@ export default {
               <a href={'/category/' + category.slug}
                 oncreate={m.route.link}
               >
-                {/*<span>1 Post</span>*/}
                 <h3>{category.title}</h3>
                 <p>{category.description}</p>
 

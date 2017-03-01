@@ -1,8 +1,7 @@
 import {store} from '../../store'
 
-
 export function categories (data = [], state = store.getState()) {
-  if(state.categories.needUpdate || !state.categories.ok) {
+  if (state.categories.needUpdate || !state.categories.ok) {
     data.push({
       t: 1,
       v: 'c1'
@@ -11,17 +10,17 @@ export function categories (data = [], state = store.getState()) {
   return data
 }
 
-export function home(data = [], state = store.getState()) {
+export function home (data = [], state = store.getState()) {
   if (state.home.needUpdate || !state.home.ok) {
     data.push({
       t: 1,
       v: 'a1'
     })
   }
-  return data;
+  return data
 }
 
-export function hotArticles(data = [], state = store.getState()) {
+export function hotArticles (data = [], state = store.getState()) {
   if (state.hotArticles.needUpdate || !state.hotArticles.ok) {
     data.push({
       t: 1,
@@ -31,7 +30,7 @@ export function hotArticles(data = [], state = store.getState()) {
   return data
 }
 
-export function articleInCategory(data = [], slug, state = store.getState()) {
+export function articleInCategory (data = [], slug, state = store.getState()) {
   if (state.articlesInCategory.needUpdate || !state.articlesInCategory.ok) {
     data.push({
       t: 2,
@@ -42,7 +41,7 @@ export function articleInCategory(data = [], slug, state = store.getState()) {
   return data
 }
 
-export function categoryInfo(data = [], slug, state = store.getState()) {
+export function categoryInfo (data = [], slug, state = store.getState()) {
   if (state.categoryInfo.needUpdate || !state.categoryInfo.ok) {
     data.push({
       t: 2,
@@ -53,7 +52,7 @@ export function categoryInfo(data = [], slug, state = store.getState()) {
   return data
 }
 
-export function post(data = [], slug, state = store.getState()) {
+export function post (data = [], slug, state = store.getState()) {
   if (state.post.needUpdate || !state.post.ok) {
     data.push({
       t: 2,
@@ -63,5 +62,3 @@ export function post(data = [], slug, state = store.getState()) {
   }
   return data
 }
-
-

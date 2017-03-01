@@ -12,6 +12,7 @@ const models = require('./models/index')
 
 const api = require('./routes/api')
 const image = require('./routes/image')
+const admin = require('./routes/admin')
 
 const port = 3000
 const app = express()
@@ -24,11 +25,9 @@ connect()
   .once('open', listen);
 
 function listen () {
-
   app.use('/assets', express.static('public'))
-
   app.use('/api', api)
-
+  app.use('/admin', admin)
   app.use('/image', image)
 
   const webpackDevMiddlewareInstance = webpackDevMiddleware(compiler, {

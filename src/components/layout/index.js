@@ -3,11 +3,11 @@ import m from 'mithril'
 /* eslint-enable */
 import {getHotArticles} from '../../data/scenes/access'
 
-let isNode = false;
+let isNode = false
 if (typeof process === 'object') {
   if (typeof process.versions === 'object') {
     if (typeof process.versions.node !== 'undefined') {
-      isNode = true;
+      isNode = true
     }
   }
 }

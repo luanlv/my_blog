@@ -6,8 +6,8 @@ const mongoose = require('mongoose')
 const Article = mongoose.model('Article')
 const Category = mongoose.model('Category')
 let unirest = require('unirest')
-var async    = require('async')
-var map = require('./mapUrl').default
+let async    = require('async')
+let map = require('./mapUrl').default
 let axios = require('axios')
 
 app.use(bodyParser.urlencoded({ extended: true }));
