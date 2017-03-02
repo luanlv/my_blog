@@ -11,7 +11,7 @@ export default function getBaseUrl () {
   if (isNode) {
     return 'http://localhost:3000/api'
   } else {
-    return 'http://localhost:3000/api'
-    // return 'http://vnguy.com/api'
+    // return 'http://localhost:3000/api'
+    return 'http://vnguy.com/api'
   }
 }

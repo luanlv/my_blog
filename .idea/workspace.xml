@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e04a79a5-2b6c-41f4-acd6-fa54f8ab133d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/routes/api.js" afterPath="$PROJECT_DIR$/scripts/routes/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/srcServer.js" afterPath="$PROJECT_DIR$/scripts/srcServer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/data/baseUrl.js" afterPath="$PROJECT_DIR$/src/data/baseUrl.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -46,7 +43,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/routes/api.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="438">
@@ -120,7 +117,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baseUrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="baseUrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/data/baseUrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -248,9 +245,9 @@
         <option value="$PROJECT_DIR$/src/routes.js" />
         <option value="$PROJECT_DIR$/src/styles.scss" />
         <option value="$PROJECT_DIR$/src/components/layout/index.js" />
-        <option value="$PROJECT_DIR$/src/data/baseUrl.js" />
         <option value="$PROJECT_DIR$/scripts/srcServer.js" />
         <option value="$PROJECT_DIR$/scripts/routes/api.js" />
+        <option value="$PROJECT_DIR$/src/data/baseUrl.js" />
       </list>
     </option>
   </component>
@@ -512,12 +509,12 @@
       <workItem from="1488388245800" duration="70000" />
       <workItem from="1488388678917" duration="490000" />
       <workItem from="1488389510653" duration="982000" />
-      <workItem from="1488395665531" duration="6007000" />
+      <workItem from="1488395665531" duration="6662000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163430000" />
+    <option name="totallyTimeSpent" value="164085000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1" width="1352" height="764" extended-state="1" />
@@ -875,14 +872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/baseUrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/srcServer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -895,6 +884,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
           <caret line="166" column="4" lean-forward="true" selection-start-line="166" selection-start-column="4" selection-end-line="166" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/baseUrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding />
         </state>
       </provider>
