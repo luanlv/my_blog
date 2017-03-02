@@ -10,7 +10,7 @@ import Post from './scenes/Post'
 import {store, initialiseStore, setAccessibleStore} from '../src/store'
 
 setAccessibleStore(initialiseStore(window.__PRELOADED_STATE__))
-store.subscribe(m.redraw)
+// store.subscribe(m.redraw)
 store.subscribe(function () {
   m.redraw()
   window.scrollTo(0, 0)
