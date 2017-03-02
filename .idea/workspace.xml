@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e04a79a5-2b6c-41f4-acd6-fa54f8ab133d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/data/baseUrl.js" afterPath="$PROJECT_DIR$/src/data/baseUrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes.js" afterPath="$PROJECT_DIR$/src/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles.scss" afterPath="$PROJECT_DIR$/src/styles.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -100,7 +97,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/layout/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
@@ -110,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baseUrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="baseUrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/data/baseUrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+              <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -247,10 +244,10 @@
         <option value="$PROJECT_DIR$/scripts/distServer.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/_scss/home.scss" />
-        <option value="$PROJECT_DIR$/src/data/baseUrl.js" />
         <option value="$PROJECT_DIR$/src/routes.js" />
         <option value="$PROJECT_DIR$/src/styles.scss" />
         <option value="$PROJECT_DIR$/src/components/layout/index.js" />
+        <option value="$PROJECT_DIR$/src/data/baseUrl.js" />
       </list>
     </option>
   </component>
@@ -501,15 +498,15 @@
       <workItem from="1488388245800" duration="70000" />
       <workItem from="1488388678917" duration="490000" />
       <workItem from="1488389510653" duration="982000" />
-      <workItem from="1488395665531" duration="2537000" />
+      <workItem from="1488395665531" duration="2829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159960000" />
+    <option name="totallyTimeSpent" value="160252000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-1" width="1352" height="764" extended-state="0" />
+    <frame x="-1" y="-1" width="1352" height="764" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24222222" sideWeight="0.48872182" order="0" side_tool="false" content_ui="combo" />
@@ -844,14 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/baseUrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -884,6 +873,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/baseUrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding />
         </state>
       </provider>
