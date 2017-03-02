@@ -92,6 +92,7 @@ router.post('/article/new', jsonParser, (req, res, next) => {
   if (!req.body)
     return res.sendStatus(400);
   else {
+    console.log(req.body)
     req.body.categories = req.body.categories.map(function (el) {
       return el.slug
     })
@@ -162,7 +163,7 @@ router.get('/articlesByCategory/:slug', (req, res) => {
 router.put('/article/:id', jsonParser, (req, res) => {
   if (!req.body) return res.sendStatus(400)
   req.body.categories = req.body.categories.map(function(el){
-    return el._id
+    return el.slug
   })
   Article.update({_id: req.body._id}, req.body, (err, article) => {
     if(err) res.sendStatus(400)
